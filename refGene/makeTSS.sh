@@ -8,3 +8,8 @@ awk '{if($4=="-"){v=$6}else{v=$5} print $3,v,v,$4}' OFS="\t" hg38.refGene.txt | 
 awk '{print substr($0,4)}' ../TSS/hg19.refGene.TSS.bed | awk '{print "human"$0}' > ../TSS/hg19_mm10_c.refGene.TSS.bed
 awk '{print substr($0,4)}' ../TSS/mm10.refGene.TSS.bed | awk '{print "mouse"$0}' >> ../TSS/hg19_mm10_c.refGene.TSS.bed
 
+awk '{print substr($0,4)}' ../TSS/hg19.refGene.TSS.bed | awk '{print "human"$0}' > ../TSS/hg19_mm10_c.refGene.TSS.bed
+awk '{print substr($0,4)}' ../TSS/mm10.refGene.TSS.bed | awk '{print "mouse"$0}' >> ../TSS/hg19_mm10_c.refGene.TSS.bed
+
+awk '{print substr($0,4)}' ../TSS/hg19.refGene.TSS.bed | awk '{print "human"$0}' > ../TSS/hg19-mm10.refGene.TSS.bed
+awk '{print substr($0,4)}' ../TSS/mm10.refGene.TSS.bed | awk '{print "mouse"$0}' >> ../TSS/hg19-mm10.refGene.TSS.bed
